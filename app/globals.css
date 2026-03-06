@@ -1,34 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 26, 26, 46;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 248, 250, 252;
+  --bg: #f8faff;
+  --bg-muted: #eff4ff;
+  --fg: #121826;
+  --brand: #4f46e5;
+  --brand-soft: #7c7cff;
+  --line: #cfd8ff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: 'Inter', system-ui, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  color: var(--fg);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 10% 10%, #eef3ff 0, transparent 40%),
+    radial-gradient(circle at 90% 20%, #f5efff 0, transparent 35%),
+    var(--bg);
+}
+
 .section-padding {
-  @apply py-16 px-4 md:px-8 lg:px-16;
+  @apply px-4 py-16 md:px-8 md:py-20;
 }
 
 .container-custom {
-  @apply max-w-6xl mx-auto;
+  @apply mx-auto max-w-6xl;
+}
+
+.nav-shell {
+  @apply fixed left-0 right-0 top-0 z-50 transition-all duration-300;
+}
+
+.nav-scrolled {
+  background: rgba(248, 250, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(207, 216, 255, 0.7);
+}
+
+.nav-inner {
+  @apply flex items-center justify-between py-4;
+}
+
+.brand {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+}
+
+.brand-dot {
+  color: var(--brand);
+}
+
+.nav-link {
+  @apply text-sm font-medium text-slate-600 transition-colors hover:text-slate-950;
+}
+
+.hero-shell {
+  position: relative;
+  padding-top: 5.5rem;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(129, 140, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 140, 248, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.56rem;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hero-title {
+  @apply mt-6 text-3xl font-extrabold leading-tight text-slate-950 md:text-5xl;
+  max-width: 14ch;
+}
+
+.text-gradient {
+  display: block;
+  margin-top: 0.3rem;
+  background: linear-gradient(90deg, var(--brand), var(--brand-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-desc {
+  @apply mt-6 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg;
+}
+
+.hero-cta {
+  @apply mt-8 flex flex-wrap gap-3;
+}
+
+.btn-primary,
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold transition;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+  border-color: #3730a3;
+  box-shadow: 4px 4px 0 #3730a3;
+}
+
+.btn-primary:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 3px 3px 0 #3730a3;
+}
+
+.btn-secondary {
+  border-color: var(--line);
+  background: #fff;
+  box-shadow: 4px 4px 0 #dbe2ff;
+}
+
+.btn-secondary:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 3px 3px 0 #dbe2ff;
+}
+
+.stats-grid {
+  @apply mt-10 grid grid-cols-1 gap-4 md:grid-cols-3;
+}
+
+.pixel-card {
+  border: 2px solid #23263a;
+  border-radius: 12px;
+  padding: 1.1rem;
+  background: #ffffff;
+  box-shadow: 5px 5px 0 #cfd8ff;
+}
+
+.stat-value {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.stat-label {
+  @apply mt-2 text-sm text-slate-600;
+}
+
+.two-col {
+  @apply grid items-center gap-8 md:grid-cols-[220px_1fr] md:gap-12;
+}
+
+.pixel-avatar {
+  width: 180px;
+  height: 180px;
+  border: 2px solid #23263a;
+  border-radius: 16px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #dbe5ff, #efe8ff);
+  box-shadow: 6px 6px 0 #cfd8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.section-title {
+  @apply text-2xl font-extrabold text-slate-950 md:text-4xl;
+}
+
+.section-text {
+  @apply text-slate-600 leading-relaxed;
+}
+
+.section-muted {
+  background: var(--bg-muted);
+  border-top: 1px solid #dde5ff;
+  border-bottom: 1px solid #dde5ff;
+}
+
+.card-title {
+  @apply text-lg font-bold text-slate-900;
+}
+
+.card-text {
+  @apply mt-2 text-sm leading-relaxed text-slate-600;
+}
+
+.card-kicker {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.52rem;
+  color: #4b5563;
+  margin-bottom: 0.7rem;
+}
+
+.card-hover {
+  transition: transform 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+}
+
+.chip {
+  border: 1px solid #d5dcff;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  color: #4b5563;
+  background: #f8f9ff;
+}
+
+.writing-row {
+  @apply flex items-center justify-between gap-4;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 0.5rem;
+  }
 }
