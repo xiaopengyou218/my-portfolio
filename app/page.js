@@ -26,10 +26,11 @@ function Navbar() {
       <div className="container-custom nav-inner">
         <a href="#" className="brand">Charles<span className="brand-dot">.</span></a>
 
-        <div className="hidden md:flex gap-6 lg:gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((link) => (
             <a key={link.name} href={link.href} className="nav-link">{link.name}</a>
           ))}
+          <a href="/en/" className="lang-link">EN</a>
         </div>
 
         <button
@@ -50,6 +51,7 @@ function Navbar() {
                 {link.name}
               </a>
             ))}
+            <a href="/en/" className="mobile-link" onClick={() => setOpen(false)}>English</a>
           </div>
         </div>
       )}
@@ -154,16 +156,19 @@ function Projects() {
       title: 'Global Hackathon Operations',
       desc: '统筹国际黑客松合作与执行，对接头部生态伙伴，单场吸引 300+ 跨国团队。',
       tags: ['Hackathon', 'Partnership', 'Execution'],
+      link: 'https://ethshanghai.org/',
     },
     {
       title: 'Grant Program & Ecosystem Growth',
       desc: '设计 Grant 全流程，推动 90+ 项目合作签署并提升生态创新活跃度。',
       tags: ['Grant', 'DevRel', 'Ecosystem'],
+      link: 'https://mask.io/',
     },
     {
       title: 'Content & Channel System from 0→1',
       desc: '搭建海外博客/EDM/社媒内容体系，生产效率提升 50%，社群活跃度提升 3 倍。',
       tags: ['Content Ops', 'Community', 'Growth'],
+      link: 'https://github.com/xiaopengyou218',
     },
   ]
 
@@ -182,6 +187,7 @@ function Projects() {
                   <span key={tag} className="chip">{tag}</span>
                 ))}
               </div>
+              <a className="case-link" href={project.link} target="_blank" rel="noreferrer">查看详情 →</a>
             </article>
           ))}
         </div>
@@ -192,9 +198,9 @@ function Projects() {
 
 function Writing() {
   const posts = [
-    { title: '海外开发者生态增长，不只是做活动', date: '2026-03' },
-    { title: '跨文化协作的实战方法', date: '2026-02' },
-    { title: 'SDK 不完善时，如何先跑通 Demo', date: '2026-01' },
+    { title: '海外开发者生态增长，不只是做活动', date: '2026-03', link: 'https://medium.com/' },
+    { title: '跨文化协作的实战方法', date: '2026-02', link: 'https://twitter.com/' },
+    { title: 'SDK 不完善时，如何先跑通 Demo', date: '2026-01', link: 'https://github.com/xiaopengyou218' },
   ]
 
   return (
@@ -203,10 +209,10 @@ function Writing() {
         <h2 className="section-title text-center">最近思考</h2>
         <div className="mt-10 space-y-4 max-w-3xl mx-auto">
           {posts.map((post) => (
-            <article key={post.title} className="pixel-card writing-row">
+            <a key={post.title} className="pixel-card writing-row writing-link" href={post.link} target="_blank" rel="noreferrer">
               <p className="card-title">{post.title}</p>
               <p className="text-sm text-slate-500">{post.date}</p>
-            </article>
+            </a>
           ))}
         </div>
       </div>
