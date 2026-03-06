@@ -43,31 +43,31 @@ function Hero() {
     <section className="hero-shell">
       <div className="hero-grid" />
       <div className="container-custom section-padding hero-content">
-        <p className="eyebrow">Tech Ops & Ecosystem Builder</p>
+        <p className="eyebrow">Global Ecosystem Growth & DevRel Ops</p>
         <h1 className="hero-title">
-          把技术能力、社区生态和业务目标
-          <span className="text-gradient">连接成可执行增长</span>
+          我做的事情很简单：
+          <span className="text-gradient">把技术变成可增长的开发者生态</span>
         </h1>
         <p className="hero-desc">
-          我是 Charles，关注 AI 产品落地、开发者生态运营和增长系统设计。
-          擅长在「技术团队」与「市场/社区」之间搭桥，把复杂问题拆成可交付路径。
+          你好，我是吴登尧（Charles）。我有 10+ 年跨国技术与运营经验，近 8 年专注海外生态增长、开发者运营与技术内容体系。
+          做过从 0→1 的全球渠道搭建，也做过黑客松、Grant、社区分层和跨文化团队协作。
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn-primary">查看项目</a>
-          <a href="#contact" className="btn-secondary">合作交流</a>
+          <a href="#projects" className="btn-primary">查看案例</a>
+          <a href="#contact" className="btn-secondary">联系我</a>
         </div>
         <div className="stats-grid">
           <div className="pixel-card">
-            <p className="stat-value">20+</p>
-            <p className="stat-label">生态活动与技术分享</p>
+            <p className="stat-value">90+</p>
+            <p className="stat-label">生态项目合作落地（Grant / Partner）</p>
           </div>
           <div className="pixel-card">
-            <p className="stat-value">0→1</p>
-            <p className="stat-label">产品与增长机制搭建</p>
+            <p className="stat-value">300+</p>
+            <p className="stat-label">单场国际黑客松参与团队（最高）</p>
           </div>
           <div className="pixel-card">
-            <p className="stat-value">AI</p>
-            <p className="stat-label">应用场景设计与落地</p>
+            <p className="stat-value">8/w</p>
+            <p className="stat-label">稳定海外内容生产与增长机制</p>
           </div>
         </div>
       </div>
@@ -80,18 +80,17 @@ function About() {
     <section id="about" className="section-padding">
       <div className="container-custom two-col">
         <div className="pixel-avatar" aria-hidden>
-          <span>👨🏻‍💻</span>
+          <span>🌍</span>
         </div>
         <div>
           <h2 className="section-title">关于我</h2>
           <p className="section-text">
-            我喜欢做两件事：
-            <strong>把新技术讲明白</strong>，以及
-            <strong>把想法做出来</strong>。
-            过去几年里，我持续在开发者社区、内容与项目实践中迭代，逐步形成一套「技术 + 运营 + 协作」的工作方法。
+            我目前负责 Ascentiz 外骨骼机器人的海外开发者社区方向，正在从零搭建开发者触达、资源体系和技术内容路径。
+            在硬件底座与 SDK 尚不完善阶段，我也会直接上手用 Python 做 Demo 验证开发者工作流可行性。
           </p>
           <p className="section-text mt-4">
-            关键词：Developer Relations、Ecosystem Growth、AI Productization。
+            之前在 Mask.io、巴比特、万链等团队长期负责海外生态增长与运营；再往前是自动化/电气工程背景，
+            这让我在技术理解与业务推进之间切换更顺畅。
           </p>
         </div>
       </div>
@@ -102,23 +101,23 @@ function About() {
 function Focus() {
   const items = [
     {
-      title: 'Developer Ecosystem',
-      desc: '建立开发者触达路径（内容、活动、社群），提高产品理解与参与度。',
+      title: 'Developer Ecosystem Build',
+      desc: '开发者清单、分层激励、内容入口与活动体系，从触达走向活跃与共创。',
     },
     {
-      title: 'AI Product Ops',
-      desc: '围绕真实场景定义需求、打磨功能叙事，并推动跨团队协作落地。',
+      title: 'Global Growth Operations',
+      desc: '海外社媒与内容策略、活动执行、跨团队协同，建立可复用的增长流程。',
     },
     {
-      title: 'Growth System',
-      desc: '构建可复用的增长动作：从首触达、激活到留存复盘。',
+      title: 'Tech-to-Market Translation',
+      desc: '理解技术约束，设计对外叙事和合作机制，让产品被开发者真正用起来。',
     },
   ]
 
   return (
     <section id="focus" className="section-padding section-muted">
       <div className="container-custom">
-        <h2 className="section-title text-center">当前聚焦</h2>
+        <h2 className="section-title text-center">我在做什么</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
           {items.map((item) => (
             <article key={item.title} className="pixel-card h-full">
@@ -135,26 +134,26 @@ function Focus() {
 function Projects() {
   const projects = [
     {
-      title: 'AI Agent Demo Program',
-      desc: '组织面向开发者的 Agent 实战活动，覆盖工具链、案例共创与复盘分享。',
-      tags: ['Community', 'AI', 'Workshops'],
+      title: 'Global Hackathon Operations',
+      desc: '参与 ETH Shanghai 2022 线上统筹，对接 Consensys / The Graph / NEAR 等生态方，活动吸引 300+ 跨国团队，并持续孵化项目。',
+      tags: ['Hackathon', 'Partnership', 'Execution'],
     },
     {
-      title: 'Developer Content Engine',
-      desc: '搭建技术内容生产流程，形成选题-发布-反馈的闭环机制。',
-      tags: ['Content Ops', 'Growth', 'Docs'],
+      title: 'Grant Program & Ecosystem Growth',
+      desc: '设计并管理 Grant 全流程（技术评估→资源扶持→结果复盘），推动 90+ 项目合作签署，提升生态创新活跃度。',
+      tags: ['Grant', 'DevRel', 'Ecosystem'],
     },
     {
-      title: 'Ecosystem Partner Playbook',
-      desc: '沉淀合作伙伴接入流程、沟通模板与协同标准，加速多方联动效率。',
-      tags: ['Partnership', 'Enablement', 'Operations'],
+      title: 'Content & Channel System from 0→1',
+      desc: '搭建海外博客、EDM、社媒等核心渠道，建立本地化内容 SOP，生产效率提升 50%，社群活跃度实现 3 倍增长。',
+      tags: ['Content Ops', 'Community', 'Growth'],
     },
   ]
 
   return (
     <section id="projects" className="section-padding">
       <div className="container-custom">
-        <h2 className="section-title text-center">精选项目</h2>
+        <h2 className="section-title text-center">代表性案例</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {projects.map((project) => (
             <article key={project.title} className="pixel-card card-hover">
@@ -176,15 +175,15 @@ function Projects() {
 
 function Writing() {
   const posts = [
-    { title: '技术运营怎么避免“只做传播不做增长”', date: '2026-02-22' },
-    { title: 'AI 产品落地的 3 个关键协作接口', date: '2026-02-03' },
-    { title: '做生态，不是做活动：我的复盘框架', date: '2026-01-11' },
+    { title: '海外开发者生态增长，不只是做活动', date: '2026-03' },
+    { title: '从工程师到生态运营：跨文化协作的实战方法', date: '2026-02' },
+    { title: '当 SDK 还没完善时，如何先跑通开发者 Demo', date: '2026-01' },
   ]
 
   return (
     <section id="writing" className="section-padding section-muted">
       <div className="container-custom">
-        <h2 className="section-title text-center">最近写作</h2>
+        <h2 className="section-title text-center">最近思考</h2>
         <div className="mt-10 space-y-4 max-w-3xl mx-auto">
           {posts.map((post) => (
             <article key={post.title} className="pixel-card writing-row">
@@ -202,14 +201,13 @@ function Contact() {
   return (
     <section id="contact" className="section-padding">
       <div className="container-custom text-center">
-        <h2 className="section-title">一起做点有意思的事</h2>
+        <h2 className="section-title">欢迎交流合作</h2>
         <p className="section-text max-w-2xl mx-auto mt-4">
-          如果你在做 AI 产品、开发者生态或技术增长项目，欢迎联系我。
-          我很乐意聊聊合作、共创或内容策划。
+          如果你在做 AI / 机器人产品出海、开发者生态建设，或希望提升国际社区增长效率，欢迎直接联系我。
         </p>
         <div className="flex flex-wrap justify-center gap-3 mt-8">
           <a className="btn-secondary" href="https://github.com/xiaopengyou218" target="_blank" rel="noreferrer">GitHub</a>
-          <a className="btn-secondary" href="mailto:econocharles@gmail.com">Email</a>
+          <a className="btn-secondary" href="mailto:brightperspective@126.com">Email</a>
         </div>
         <p className="text-xs text-slate-400 mt-10">© 2026 Charles Wu</p>
       </div>
