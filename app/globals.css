@@ -62,6 +62,24 @@ body {
   @apply text-sm font-medium text-slate-600 transition-colors hover:text-slate-900;
 }
 
+.mobile-menu-btn {
+  @apply rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700;
+}
+
+.mobile-menu {
+  border-top: 1px solid var(--line);
+  background: rgba(248, 250, 252, 0.98);
+  backdrop-filter: blur(6px);
+}
+
+.mobile-menu-inner {
+  @apply grid grid-cols-2 gap-2 py-3;
+}
+
+.mobile-link {
+  @apply rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100;
+}
+
 .hero-shell {
   padding-top: 6rem;
 }
@@ -209,10 +227,18 @@ body {
 @media (max-width: 768px) {
   .hero-title {
     max-width: 100%;
-    @apply text-3xl;
+    @apply text-[2rem] leading-tight;
+  }
+
+  .hero-desc {
+    @apply text-[0.98rem] leading-7;
   }
 
   .section-padding {
-    @apply py-14;
+    @apply py-12;
+  }
+
+  .stats-grid {
+    @apply mt-8;
   }
 }
